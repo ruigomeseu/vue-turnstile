@@ -55,6 +55,11 @@ export default defineComponent({
       required: false,
       default: 'auto',
     },
+    action: {
+      type: String,
+      required: false,
+      default: '',
+    },
     renderOnMount: {
       type: Boolean,
       required: false,
@@ -75,6 +80,7 @@ export default defineComponent({
         theme: this.theme,
         size: this.size,
         callback: this.callback,
+        action: this.action,
       };
     },
   },
