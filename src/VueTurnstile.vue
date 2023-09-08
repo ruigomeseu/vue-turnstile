@@ -60,6 +60,11 @@ export default defineComponent({
       required: false,
       default: '',
     },
+    appearance: {
+      type: String as PropType<'always' | 'execute' | 'interaction-only'>,
+      required: false,
+      default: 'always',
+    },
     renderOnMount: {
       type: Boolean,
       required: false,
@@ -81,6 +86,7 @@ export default defineComponent({
         size: this.size,
         callback: this.callback,
         action: this.action,
+        appearance: this.appearance,
       };
     },
   },

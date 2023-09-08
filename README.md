@@ -53,6 +53,7 @@ export default {
 | size            | `'normal' \| 'compact'`       | Widget size                                                                                                                           | No       | `'normal'` |
 | theme           | `'light' \| 'dark' \| 'auto'` | Widget theme - auto respects the user's browser preference                                                                            | No       | `'auto'`   |
 | action          | `String`                      | A customer value that can be used to differentiate widgets under the same sitekey in analytics and which is returned upon validation. | No       | `''`   |
+| appearance      | `'always' \| 'execute' \| 'interaction-only'` | Appearance controls when the widget is visible - [Docs](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/#appearance-modes) | No       | `'always'`   |
 | render-on-mount | `Boolean`                     | Automatically render Turnstile widget after component mounts                                                                          | No       | `true`     |
 
 ## Methods
