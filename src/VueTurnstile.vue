@@ -20,7 +20,7 @@ declare interface VueTurnstileData {
   resetTimeout?: ReturnType<typeof setTimeout>;
 }
 
-let turnstileState = window.turnstile !== undefined ? 'ready' : 'unloaded';
+let turnstileState = typeof window !== 'undefined' ? (window.turnstile !== undefined ? 'ready' : 'unloaded') : 'unloaded';
 let turnstileLoad: {
   resolve: (value?: unknown) => void;
   reject: (value?: unknown) => void;
