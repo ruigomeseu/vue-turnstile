@@ -89,11 +89,21 @@ export default defineComponent({
         callback: this.callback,
         action: this.action,
         appearance: this.appearance,
+        'error-callback': this.errorCallback,
+        'unsupported-callback': this.unsupportedCallback,
       };
     },
   },
 
   methods: {
+    unsupportedCallback() {
+      this.$emit('unsupported');
+    },
+
+    errorCallback(code: string) {
+      this.$emit('error', code);
+    },
+
     callback(token: string) {
       this.$emit('update:modelValue', token);
       this.startResetTimeout();
