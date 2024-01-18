@@ -63,6 +63,15 @@ export default {
 | `reset()`  | Resets the widget  |
 | `render()` | Renders the widget |
 
+
+## Events
+
+| Method         | Params  | Description        |
+| -------------- | ------- | ------------------ |
+| `@error`       | `code`  | Callback invoked when there is an error (e.g. network error or the challenge failed). |
+| `@unsupported` | -       | Callback invoked when a given client/browser is not supported by Turnstile. |
+
+
 ## Author
 
 Rui Gomes  
