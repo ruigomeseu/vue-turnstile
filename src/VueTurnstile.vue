@@ -30,7 +30,7 @@ let turnstileLoad: {
 export default defineComponent({
   name: 'VueTurnstile',
 
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'error', 'unsupported'],
 
   props: {
     siteKey: {
