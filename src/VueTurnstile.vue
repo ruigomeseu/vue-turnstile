@@ -56,6 +56,11 @@ export default defineComponent({
       required: false,
       default: 'auto',
     },
+    language: {
+      type: String,
+      required: false,
+      default: 'auto',
+    },
     action: {
       type: String,
       required: false,
@@ -85,6 +90,7 @@ export default defineComponent({
       return {
         sitekey: this.siteKey,
         theme: this.theme,
+        language: this.language,
         size: this.size,
         callback: this.callback,
         action: this.action,
@@ -115,7 +121,7 @@ export default defineComponent({
         window.turnstile.reset();
       }
     },
-    
+
     remove() {
       if (this.widgetId) {
         window.turnstile.remove(this.widgetId);
@@ -166,7 +172,7 @@ export default defineComponent({
       this.render();
     }
   },
-  
+
   beforeUnmount() {
     this.remove();
     clearTimeout(this.resetTimeout);

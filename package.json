@@ -1,6 +1,6 @@
 {
   "name": "vue-turnstile",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Vue library for Cloudflare Turnstile CAPTCHA alternative",
   "type": "module",
   "files": [
