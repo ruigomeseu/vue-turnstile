@@ -45,16 +45,17 @@ export default {
 
 ## Customization options
 
-| Prop            | Type                          | Description                                                                                                                           | Required | Default    |
-| --------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------- |
-| site-key        | `String`                      | Your Turnstile sitekey - [Docs](https://developers.cloudflare.com/turnstile/get-started/)                                             | Yes      | N/A        |
-| v-model         | `String`                      | Binding that contains the token returned by the Turnstile widget                                                                      | Yes      | N/A        |
-| reset-interval  | `Number`                      | Get a fresh token after `reset-interval` milliseconds - Turnstile tokens only last for 5 minutes                                      | No       | `295000`   |
-| size            | `'normal' \| 'compact'`       | Widget size                                                                                                                           | No       | `'normal'` |
-| theme           | `'light' \| 'dark' \| 'auto'` | Widget theme - auto respects the user's browser preference                                                                            | No       | `'auto'`   |
-| action          | `String`                      | A customer value that can be used to differentiate widgets under the same sitekey in analytics and which is returned upon validation. | No       | `''`   |
-| appearance      | `'always' \| 'execute' \| 'interaction-only'` | Appearance controls when the widget is visible - [Docs](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/#appearance-modes) | No       | `'always'`   |
-| render-on-mount | `Boolean`                     | Automatically render Turnstile widget after component mounts                                                                          | No       | `true`     |
+| Prop            | Type                                          | Description                                                                                                                                                  | Required | Default    |
+| --------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------- |
+| site-key        | `String`                                      | Your Turnstile sitekey - [Docs](https://developers.cloudflare.com/turnstile/get-started/)                                                                    | Yes      | N/A        |
+| v-model         | `String`                                      | Binding that contains the token returned by the Turnstile widget                                                                                             | Yes      | N/A        |
+| reset-interval  | `Number`                                      | Get a fresh token after `reset-interval` milliseconds - Turnstile tokens only last for 5 minutes                                                             | No       | `295000`   |
+| size            | `'normal' \| 'compact'`                       | Widget size                                                                                                                                                  | No       | `'normal'` |
+| theme           | `'light' \| 'dark' \| 'auto'`                 | Widget theme - auto respects the user's browser preference                                                                                                   | No       | `'auto'`   |
+| action          | `String`                                      | A customer value that can be used to differentiate widgets under the same sitekey in analytics and which is returned upon validation.                        | No       | `''`       |
+| appearance      | `'always' \| 'execute' \| 'interaction-only'` | Appearance controls when the widget is visible - [Docs](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/#appearance-modes)     | No       | `'always'` |
+| render-on-mount | `Boolean`                                     | Automatically render Turnstile widget after component mounts                                                                                                 | No       | `true`     |
+| language        | `String`                                      | Language to display - ISO 639-1 two-letter language code - [Supported languages](https://developers.cloudflare.com/turnstile/reference/supported-languages/) | No       | `auto`     |
 
 ## Methods
 
@@ -66,10 +67,10 @@ export default {
 
 ## Events
 
-| Method         | Params  | Description        |
-| -------------- | ------- | ------------------ |
+| Method         | Params  | Description                                                                           |
+| -------------- | ------- | ------------------------------------------------------------------------------------- |
 | `@error`       | `code`  | Callback invoked when there is an error (e.g. network error or the challenge failed). |
-| `@unsupported` | -       | Callback invoked when a given client/browser is not supported by Turnstile. |
+| `@unsupported` | -       | Callback invoked when a given client/browser is not supported by Turnstile.           |
 
 
 ## Author
