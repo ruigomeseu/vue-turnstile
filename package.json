@@ -13,7 +13,7 @@
     ".": {
       "types": "./dist/VueTurnstile.vue.d.ts",
       "import": "./dist/vue-turnstile.js",
-      "require": "./dist/vue-turnstile.umd.js"
+      "require": "./dist/vue-turnstile.umd.cjs"
     }
   },
   "scripts": {
