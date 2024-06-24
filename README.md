@@ -67,10 +67,13 @@ export default {
 
 ## Events
 
-| Method         | Params  | Description                                                                           |
-| -------------- | ------- | ------------------------------------------------------------------------------------- |
-| `@error`       | `code`  | Callback invoked when there is an error (e.g. network error or the challenge failed). |
-| `@unsupported` | -       | Callback invoked when a given client/browser is not supported by Turnstile.           |
+| Method                   | Params  | Description                                                                           |
+| ------------------------ | ------- | ------------------------------------------------------------------------------------- |
+| `@error`                 | `code`  | Callback invoked when there is an error (e.g. network error or the challenge failed). |
+| `@unsupported`           | -       | Callback invoked when a given client/browser is not supported by Turnstile.           |
+| `@expired`               | -       | Callback invoked when the token expires and does not reset the widget.                |
+| `@before-interactive`    | -       | Callback invoked before the challenge enters interactive mode.                        |
+| `@after-interactive`     | -       | callback invoked when challenge has left interactive mode.                            |
 
 
 ## Author
