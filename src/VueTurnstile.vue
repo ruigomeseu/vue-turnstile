@@ -30,7 +30,7 @@ let turnstileLoad: {
 export default defineComponent({
   name: 'VueTurnstile',
 
-  emits: ['update:modelValue', 'error', 'unsupported'],
+  emits: ['update:modelValue', 'error', 'unsupported', 'expired', 'before-interactive', 'after-interactive'],
 
   props: {
     siteKey: {
@@ -96,12 +96,27 @@ export default defineComponent({
         action: this.action,
         appearance: this.appearance,
         'error-callback': this.errorCallback,
+        'expired-callback': this.expiredCallback,
         'unsupported-callback': this.unsupportedCallback,
+        'before-interactive-callback': this.beforeInteractiveCallback,
+        'after-interactive-callback': this.afterInteractivecallback,
       };
     },
   },
 
   methods: {
+    afterInteractivecallback() {
+        this.$emit('after-interactive');
+    },
+
+    beforeInteractiveCallback() {
+        this.$emit('before-interactive');
+    },
+    
+    expiredCallback() {
+      this.$emit('expired');
+    },	
+    
     unsupportedCallback() {
       this.$emit('unsupported');
     },
